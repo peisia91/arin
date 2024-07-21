@@ -30,7 +30,7 @@ fn call_with_callback(callback: Py<PyFunction>, data: &PyAny) -> PyResult<()> {
 }
 
 #[pymodule]
-fn pyrin(_py: Python, m: &PyModule) -> PyResult<()> {
+fn arin(_py: Python, m: &PyModule) -> PyResult<()> {
 
     m.add_function(wrap_pyfunction!(to_leor, m)?)?;
     m.add_function(wrap_pyfunction!(from_leor, m)?)?;

@@ -291,10 +291,12 @@ impl From<NetworkId> for Params {
 
 pub const MAINNET_PARAMS: Params = Params {
     dns_seeders: &[
-        "seeder1-mainnet.pyrin.network",
-        "seeder2-mainnet.pyrin.network",
-        "seeder3-mainnet.pyrin.network",
-        "seeder4-mainnet.pyrin.network",
+        /*
+        "seeder1-mainnet.arin.network",
+        "seeder2-mainnet.arin.network",
+        "seeder3-mainnet.arin.network",
+        "seeder4-mainnet.arin.network",
+         */
     ],
     net: NetworkId::new(NetworkType::Mainnet),
     genesis: GENESIS,

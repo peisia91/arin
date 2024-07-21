@@ -63,9 +63,9 @@ fn get_home_dir() -> PathBuf {
 /// Get the default application directory.
 pub fn get_app_dir() -> PathBuf {
     #[cfg(target_os = "windows")]
-    return get_home_dir().join("pyrin");
+    return get_home_dir().join("arin");
     #[cfg(not(target_os = "windows"))]
-    return get_home_dir().join(".pyrin");
+    return get_home_dir().join(".arin");
 }
 
 pub fn validate_args(args: &Args) -> ConfigResult<()> {
@@ -250,7 +250,7 @@ pub fn create_core_with_runtime(runtime: &Runtime, args: &Args, fd_total_budget:
     // Reset Condition: User explicitly requested a reset
     if is_db_reset_needed && db_dir.exists() {
         let msg = "Reset DB was requested -- this means the current databases will be fully deleted,
-do you confirm? (answer y/n or pass --yes to the Pyrin command line to confirm all interactive questions)";
+do you confirm? (answer y/n or pass --yes to the Arin command line to confirm all interactive questions)";
         get_user_approval_or_exit(msg, args.yes);
         info!("Deleting databases");
         fs::remove_dir_all(&db_dir).unwrap();
@@ -309,10 +309,10 @@ do you confirm? (answer y/n or pass --yes to the Pyrin command line to confirm a
             || MultiConsensusManagementStore::new(meta_db.clone()).should_upgrade().unwrap())
     {
         let msg =
-            "Node database is from a different Pyrin *DB* version and needs to be fully deleted, do you confirm the delete? (y/n)";
+            "Node database is from a different Arin *DB* version and needs to be fully deleted, do you confirm the delete? (y/n)";
         get_user_approval_or_exit(msg, args.yes);
 
-        info!("Deleting databases from previous Pyrin version");
+        info!("Deleting databases from previous Arin version");
 
         is_db_reset_needed = true;
     }

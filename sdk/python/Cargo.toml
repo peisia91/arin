@@ -1,10 +1,10 @@
 [package]
-name = "pyrin-sdk"
+name = "arin-sdk"
 version = "0.1.2"
 edition = "2021"
 
 [lib]
-name = "pyrin"
+name = "arin"
 crate-type = ["cdylib"]
 
 [dependencies]

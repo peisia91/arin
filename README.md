@@ -1,7 +1,7 @@
 
-#### Pyrin Node
+#### Arin Node
 
-Pyrin node built on rust, based on [rusty-kaspa](https://github.com/kaspanet/rusty-kaspa)
+Arin node built on rust, based on [rusty-kaspa](https://github.com/kaspanet/rusty-kaspa)
 
 ## Installation
   <details>
@@ -42,8 +42,8 @@ Pyrin node built on rust, based on [rusty-kaspa](https://github.com/kaspanet/rus
       ```      
   5. Clone the repo
       ```bash
-      git clone https://github.com/Pyrinpyi/pyrin
-      cd pyrin
+      git clone https://github.com/peisia91/arin
+      cd arin
       ```
   </details>
 
@@ -79,8 +79,8 @@ Pyrin node built on rust, based on [rusty-kaspa](https://github.com/kaspanet/rus
       ```      
   7. Clone the repo
       ```bash
-      git clone https://github.com/Pyrinpyi/pyrin
-      cd pyrin
+      git clone https://github.com/peisia91/arin
+      cd arin
       ```
  </details>      
 
@@ -139,8 +139,8 @@ To build WASM on MacOS you need to install `llvm` from homebrew (at the time of 
       ```      
   5. Clone the repo
       ```bash
-      git clone https://github.com/Pyrinpyi/pyrin
-      cd pyrin
+      git clone https://github.com/peisia91/arin
+      cd arin
       ```
 
  </details>   
@@ -168,16 +168,16 @@ To build WASM on MacOS you need to install `llvm` from homebrew (at the time of 
 
 ### Builds & documentation
 
-  - Release builds: https://github.com/Pyrinpyi/pyrin/releases
+  - Release builds: https://github.com/peisia91/arin/releases
 
   </details>
 <details>
 
 <summary>
-Pyrin CLI + Wallet
+Arin CLI + Wallet
 </summary>
-`pyrin-cli` crate provides cli-driven RPC interface to the node and a
-terminal interface to the Pyrin Wallet runtime. These wallets are
+`arin-cli` crate provides cli-driven RPC interface to the node and a
+terminal interface to the Arin Wallet runtime. These wallets are
 compatible with WASM SDK Wallet API.
 
 
@@ -216,12 +216,12 @@ The framework is compatible with all major desktop and mobile browsers.
   **Start a mainnet node**
 
   ```bash
-  cargo run --release --bin pyrin
+  cargo run --release --bin arin
   ```
   **Start a testnet node**
 
   ```bash
-cargo run --release --bin pyrin -- --testnet
+cargo run --release --bin arin -- --testnet
   ```
 
 <details>
@@ -231,9 +231,9 @@ Using a configuration file
   </summary>
 
   ```bash
-cargo run --release --bin pyrin -- --configfile /path/to/configfile.toml
+cargo run --release --bin arin -- --configfile /path/to/configfile.toml
 # or
-cargo run --release --bin pyrin -- -C /path/to/configfile.toml
+cargo run --release --bin arin -- -C /path/to/configfile.toml
   ```
   - The config file should be a list of \<CLI argument\> = \<value\> separated by newlines. 
   - Whitespace around the `=` is fine, `arg=value` and `arg = value` are both parsed correctly.
@@ -253,7 +253,7 @@ addpeer = ["10.0.0.1", "1.2.3.4"]
  Pass the `--help` flag to view all possible arguments
 
   ```bash
-cargo run --release --bin pyrin -- --help
+cargo run --release --bin arin -- --help
   ```
 </details>
 
@@ -263,7 +263,7 @@ cargo run --release --bin pyrin -- --help
 wRPC
   </summary>
 
-  wRPC subsystem is disabled by default in `pyrin` and can be enabled via:
+  wRPC subsystem is disabled by default in `arin` and can be enabled via:
 
 
   JSON protocol:
@@ -278,7 +278,7 @@ wRPC
 
   **Sidenote:**
 
-  Pyrin integrates an optional wRPC
+  Arin integrates an optional wRPC
   subsystem. wRPC is a high-performance, platform-neutral, Rust-centric, WebSocket-framed RPC 
   implementation that can use [Borsh](https://borsh.io/) and JSON protocol encoding.
 
@@ -290,10 +290,10 @@ wRPC
   both client and server should be built from the same codebase.  
 
   JSON protocol is based on 
-  Pyrin data structures and is data-structure-version agnostic. You can connect to the
+  Arin data structures and is data-structure-version agnostic. You can connect to the
   JSON endpoint using any WebSocket library. Built-in RPC clients for JavaScript and
   TypeScript capable of running in web browsers and Node.js are available as a part of
-  the Pyrin WASM framework.
+  the Arin WASM framework.
 
   **wRPC to gRPC Proxy is deprecated and no longer supported.**
 
@@ -309,9 +309,9 @@ Mining
 
 Mining is currently supported only on testnet, so once you've setup a test node, follow these instructions.
 
-1. Download and unzip the latest binaries bundle of [Pyrinpyi/pyrin](https://github.com/Pyrinpyi/pyrin/releases).
+1. Download and unzip the latest binaries bundle of [peisia91/arin](https://github.com/peisia91/arin/releases).
 
-2. In a separate terminal run the Pyrinpyi/pyrin miner:
+2. In a separate terminal run the peisia91/arin miner:
 
     ```
     kaspaminer --testnet --miningaddr kaspatest:qrcqat6l9zcjsu7swnaztqzrv0s7hu04skpaezxk43y4etj8ncwfk308jlcew
@@ -331,7 +331,7 @@ Mining is currently supported only on testnet, so once you've setup a test node,
 
 <summary>Simulation framework (Simpa)</summary>
 
-Logging in `pyrin` and `simpa` can be [filtered](https://docs.rs/env_logger/0.10.0/env_logger/#filtering-results) by either:
+Logging in `arin` and `simpa` can be [filtered](https://docs.rs/env_logger/0.10.0/env_logger/#filtering-results) by either:
 
 The current codebase supports a full in-process network simulation, building an actual DAG over virtual time with virtual delay and benchmarking validation time (following the simulation generation). 
 
@@ -355,10 +355,10 @@ cargo run --release --bin simpa -- -t=200 -d=2 -b=8 -n=1000
 
 <summary>Heap Profiling</summary>
 
-Heap-profiling in `pyrin` and `simpa` can be done by enabling `heap` feature and profile using the `--features` argument
+Heap-profiling in `arin` and `simpa` can be done by enabling `heap` feature and profile using the `--features` argument
 
 ```bash
-cargo run --bin pyrin --profile heap --features=heap
+cargo run --bin arin --profile heap --features=heap
 ```
 
 It will produce `{bin-name}-heap.json` file in the root of the workdir, that can be inspected by the [dhat-viewer](https://github.com/unofficial-mirror/valgrind/tree/master/dhat)
@@ -374,7 +374,7 @@ It will produce `{bin-name}-heap.json` file in the root of the workdir, that can
 **Run unit and most integration tests**
 
 ```bash
-cd pyrin
+cd arin
 cargo test --release
 // or install nextest and run
 ```
@@ -384,7 +384,7 @@ cargo test --release
 **Using nextest**
 
 ```bash
-cd pyrin
+cd arin
 cargo nextest run --release
 ```
 
@@ -398,7 +398,7 @@ cargo nextest run --release
 <summary>Benchmarks</summary>
 
 ```bash
-cd pyrin
+cd arin
 cargo bench
 ```
 
@@ -408,13 +408,13 @@ cargo bench
 
 <summary>Logging</summary>
 
-Logging in `pyrin` and `simpa` can be [filtered](https://docs.rs/env_logger/0.10.0/env_logger/#filtering-results) by either:
+Logging in `arin` and `simpa` can be [filtered](https://docs.rs/env_logger/0.10.0/env_logger/#filtering-results) by either:
 
 1. Defining the environment variable `RUST_LOG`
 2. Adding the --loglevel argument like in the following example:
 
     ```
-    (cargo run --bin pyrin -- --loglevel info,kaspa_rpc_core=trace,kaspa_grpc_core=trace,consensus=trace,kaspa_core=trace) 2>&1 | tee ~/pyrin.log
+    (cargo run --bin arin -- --loglevel info,kaspa_rpc_core=trace,kaspa_grpc_core=trace,consensus=trace,kaspa_core=trace) 2>&1 | tee ~/arin.log
     ```
     In this command we set the `loglevel` to `INFO`.
 

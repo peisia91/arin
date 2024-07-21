@@ -48,11 +48,11 @@ jobs:
         # We're using musl to make the binaries statically linked and portable
         run: |
           cargo install cargo-zigbuild
-          cargo --verbose zigbuild --bin pyrin --release --target x86_64-unknown-linux-gnu.2.27
+          cargo --verbose zigbuild --bin arin --release --target x86_64-unknown-linux-gnu.2.27
           mkdir bin || true
-          cp target/x86_64-unknown-linux-gnu/release/pyrin bin/
-          archive="bin/pyrin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
-          asset_name="pyrin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
+          cp target/x86_64-unknown-linux-gnu/release/arin bin/
+          archive="bin/arin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
+          asset_name="arin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
           zip -r "${archive}" ./bin/*
           echo "archive=${archive}" >> $GITHUB_ENV
           echo "asset_name=${asset_name}" >> $GITHUB_ENV
@@ -61,11 +61,11 @@ jobs:
         if: runner.os == 'Windows'
         shell: bash
         run: |
-          cargo build --bin pyrin --release
+          cargo build --bin arin --release
           mkdir bin || true
-          cp target/release/pyrin.exe bin/
-          archive="bin/pyrin-${{ github.event.release.tag_name }}-win64.zip"
-          asset_name="pyrin-${{ github.event.release.tag_name }}-win64.zip"
+          cp target/release/arin.exe bin/
+          archive="bin/arin-${{ github.event.release.tag_name }}-win64.zip"
+          asset_name="arin-${{ github.event.release.tag_name }}-win64.zip"
           powershell "Compress-Archive bin/* \"${archive}\""
           echo "archive=${archive}" >> $GITHUB_ENV
           echo "asset_name=${asset_name}" >> $GITHUB_ENV
@@ -73,11 +73,11 @@ jobs:
       - name: Build on MacOS
         if: runner.os == 'macOS'
         run: |
-          cargo build --bin pyrin --release
+          cargo build --bin arin --release
           mkdir bin || true
-          cp target/release/pyrin bin/
-          archive="bin/pyrin-${{ github.event.release.tag_name }}-osx.zip"
-          asset_name="pyrin-${{ github.event.release.tag_name }}-osx.zip"
+          cp target/release/arin bin/
+          archive="bin/arin-${{ github.event.release.tag_name }}-osx.zip"
+          asset_name="arin-${{ github.event.release.tag_name }}-osx.zip"
           zip -r "${archive}" ./bin/*
           echo "archive=${archive}" >> $GITHUB_ENV
           echo "asset_name=${asset_name}" >> $GITHUB_ENV

@@ -226,7 +226,7 @@ mod tests {
     use super::*;
     use crate::{config::bps::Testnet11Bps, merkle::calc_hash_merkle_root};
 
-    #[ignore] // TODO: Pyrin
+    #[ignore] // TODO: Arin
     #[test]
     fn test_genesis_hashes() {
         [GENESIS, TESTNET_GENESIS, TESTNET11_GENESIS, SIMNET_GENESIS, DEVNET_GENESIS].into_iter().for_each(|genesis| {

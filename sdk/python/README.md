@@ -1,7 +1,7 @@
 
 
-#### Pyrin SDK Python Bindings 
-[SDK Documentation](https://docs.pyrin.network/7.-sdk/python/getting-started)
+#### Arin SDK Python Bindings 
+[SDK Documentation](https://docs.arin.network/7.-sdk/python/getting-started)
 
 Built using [PyO3](https://github.com/PyO3/pyo3)
 
@@ -9,29 +9,29 @@ Built using [PyO3](https://github.com/PyO3/pyo3)
 #### Installation
 
 ```bash
-pip install pyrin-network
+pip install arin-network
 ```
 
 #### Running node with wRPC
 ```bash
-pyrin --utxoindex --rpclisten-borsh
+arin --utxoindex --rpclisten-borsh
 ```
 
 #### Usage
 
 ```python
-import pyrin
+import arin
 
-rpc = pyrin.RPC()
+rpc = arin.RPC()
 await rpc.connect()
-balance = await rpc.get_balance_by_address("pyrin:qzn54t6vpasykvudztupcpwn2gelxf8y9p84szksr73me39mzf69uaalnymtx")
+balance = await rpc.get_balance_by_address("arin:qzn54t6vpasykvudztupcpwn2gelxf8y9p84szksr73me39mzf69uaalnymtx")
 print("balance:", balance)
 ```
 
 ```python
-import pyrin
+import arin
 
-wallet = pyrin.Wallet()
+wallet = arin.Wallet()
 r = await wallet.connect()
 account = await wallet.create_account()
 ```
