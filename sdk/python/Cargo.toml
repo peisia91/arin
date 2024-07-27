@@ -1,10 +1,10 @@
 [package]
-name = "arin-sdk"
+name = "karin-sdk"
 version = "0.1.2"
 edition = "2021"
 
 [lib]
-name = "arin"
+name = "karin"
 crate-type = ["cdylib"]
 
 [dependencies]

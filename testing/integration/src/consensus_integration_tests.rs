@@ -1585,7 +1585,7 @@ async fn difficulty_test() {
         // Here we create two chains: a chain of blue blocks, and a chain of red blocks with
         // very low timestamps. Because the red blocks should be part of the difficulty
         // window, their low timestamps should lower the difficulty, and we check it by
-        // comparing the bits of two blocks with the same blue score, one with the red
+        // compkaring the bits of two blocks with the same blue score, one with the red
         // blocks in its past and one without.
         info!("{} - Stage 6", test.name);
         let split_hash = tip.hash;

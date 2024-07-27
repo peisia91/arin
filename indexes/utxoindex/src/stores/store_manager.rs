@@ -113,7 +113,7 @@ impl Store {
         self.circulating_supply_store.remove()?;
         self.utxos_by_script_public_key_store.delete_all()?;
 
-        trace!("[{0}] clearing utxoindex database - success!", IDENT);
+        trace!("[{0}] clekaring utxoindex database - success!", IDENT);
 
         Ok(())
     }

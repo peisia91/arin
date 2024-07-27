@@ -16,7 +16,7 @@ members = [
     "consensus/notify",
     "consensus/pow",
     "consensus/wasm",
-    "arin",
+    "karin",
     "simpa",
     "wasm",
     "wasm/core",
@@ -64,9 +64,9 @@ members = [
 [workspace.package]
 rust-version = "1.78.0"
 version = "0.14.1"
-authors = ["Arin developers", "Kaspa developers"]
+authors = ["Karin developers", "Kaspa developers"]
 license = "ISC"
-repository = "https://github.com/peisia91/arin"
+repository = "https://github.com/peisia91/karin"
 edition = "2021"
 include = [
     "src/**/*.rs",
@@ -134,7 +134,7 @@ kaspa-wrpc-proxy = { version = "0.14.1", path = "rpc/wrpc/proxy" }
 kaspa-wrpc-server = { version = "0.14.1", path = "rpc/wrpc/server" }
 kaspa-wrpc-wasm = { version = "0.14.1", path = "rpc/wrpc/wasm" }
 kaspa-wrpc-example-subscriber = { version = "0.14.1", path = "rpc/wrpc/examples/subscriber" }
-arin = { version = "0.14.1", path = "arin" }
+karin = { version = "0.14.1", path = "karin" }
 kaspa-alloc = { version = "0.14.1", path = "utils/alloc" }
 
 # external

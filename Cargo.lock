@@ -207,69 +207,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "arin"
-version = "0.14.1"
-dependencies = [
- "async-channel 2.2.1",
- "clap 4.5.4",
- "dhat",
- "dirs",
- "futures-util",
- "kaspa-addresses",
- "kaspa-addressmanager",
- "kaspa-alloc",
- "kaspa-consensus",
- "kaspa-consensus-core",
- "kaspa-consensus-notify",
- "kaspa-consensusmanager",
- "kaspa-core",
- "kaspa-database",
- "kaspa-grpc-server",
- "kaspa-hashes",
- "kaspa-index-processor",
- "kaspa-mining",
- "kaspa-notify",
- "kaspa-p2p-flows",
- "kaspa-perf-monitor",
- "kaspa-rpc-core",
- "kaspa-rpc-service",
- "kaspa-txscript",
- "kaspa-utils",
- "kaspa-utils-tower",
- "kaspa-utxoindex",
- "kaspa-wrpc-server",
- "log",
- "num_cpus",
- "rand 0.8.5",
- "rayon",
- "serde",
- "serde_with",
- "tempfile",
- "thiserror",
- "tokio",
- "toml 0.8.12",
- "workflow-log",
-]
-
-[[package]]
-name = "arin-sdk"
-version = "0.1.2"
-dependencies = [
- "futures",
- "kaspa-addresses",
- "kaspa-bip32",
- "kaspa-consensus-core",
- "kaspa-muhash",
- "kaspa-notify",
- "kaspa-rpc-core",
- "kaspa-wallet-core",
- "pyo3",
- "pyo3-asyncio",
- "tokio",
- "workflow-core",
-]
-
-[[package]]
 name = "arrayref"
 version = "0.3.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2510,6 +2447,69 @@ dependencies = [
 ]
 
 [[package]]
+name = "karin"
+version = "0.14.1"
+dependencies = [
+ "async-channel 2.2.1",
+ "clap 4.5.4",
+ "dhat",
+ "dirs",
+ "futures-util",
+ "kaspa-addresses",
+ "kaspa-addressmanager",
+ "kaspa-alloc",
+ "kaspa-consensus",
+ "kaspa-consensus-core",
+ "kaspa-consensus-notify",
+ "kaspa-consensusmanager",
+ "kaspa-core",
+ "kaspa-database",
+ "kaspa-grpc-server",
+ "kaspa-hashes",
+ "kaspa-index-processor",
+ "kaspa-mining",
+ "kaspa-notify",
+ "kaspa-p2p-flows",
+ "kaspa-perf-monitor",
+ "kaspa-rpc-core",
+ "kaspa-rpc-service",
+ "kaspa-txscript",
+ "kaspa-utils",
+ "kaspa-utils-tower",
+ "kaspa-utxoindex",
+ "kaspa-wrpc-server",
+ "log",
+ "num_cpus",
+ "rand 0.8.5",
+ "rayon",
+ "serde",
+ "serde_with",
+ "tempfile",
+ "thiserror",
+ "tokio",
+ "toml 0.8.12",
+ "workflow-log",
+]
+
+[[package]]
+name = "karin-sdk"
+version = "0.1.2"
+dependencies = [
+ "futures",
+ "kaspa-addresses",
+ "kaspa-bip32",
+ "kaspa-consensus-core",
+ "kaspa-muhash",
+ "kaspa-notify",
+ "kaspa-rpc-core",
+ "kaspa-wallet-core",
+ "pyo3",
+ "pyo3-asyncio",
+ "tokio",
+ "workflow-core",
+]
+
+[[package]]
 name = "kaspa-addresses"
 version = "0.14.1"
 dependencies = [
@@ -3389,7 +3389,6 @@ dependencies = [
 name = "kaspa-testing-integration"
 version = "0.14.1"
 dependencies = [
- "arin",
  "async-channel 2.2.1",
  "async-trait",
  "bincode",
@@ -3403,6 +3402,7 @@ dependencies = [
  "futures-util",
  "indexmap 2.2.6",
  "itertools 0.11.0",
+ "karin",
  "kaspa-addresses",
  "kaspa-alloc",
  "kaspa-bip32",

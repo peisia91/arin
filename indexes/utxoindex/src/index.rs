@@ -101,7 +101,7 @@ impl UtxoIndexApi for UtxoIndex {
         Ok(utxoindex_changes.utxo_changes)
     }
 
-    /// Checks to see if the [UtxoIndex] is sync'd. This is done via comparing the utxoindex committed `VirtualParent` hashes with those of the consensus database.
+    /// Checks to see if the [UtxoIndex] is sync'd. This is done via compkaring the utxoindex committed `VirtualParent` hashes with those of the consensus database.
     ///
     /// **Note:** Due to sync gaps between the utxoindex and consensus, this function is only reliable while consensus is not processing new blocks.
     fn is_synced(&self) -> UtxoIndexResult<bool> {

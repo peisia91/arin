@@ -607,14 +607,14 @@ mod tests {
                 let cmp = &subscriptions[self.left] == &subscriptions[self.right];
                 assert_eq!(
                     cmp, self.should_match,
-                    "{name}: subscriptions should {equal}, comparing {:?} with {:?}",
+                    "{name}: subscriptions should {equal}, compkaring {:?} with {:?}",
                     &subscriptions[self.left], &subscriptions[self.right],
                 );
                 // Compare Box dyn Single hash
                 assert_eq!(
                     get_hash(&subscriptions[self.left]) == get_hash(&subscriptions[self.right]),
                     self.should_match,
-                    "{name}: subscription hashes should {equal}, comparing {:?} => {} with {:?} => {}",
+                    "{name}: subscription hashes should {equal}, compkaring {:?} => {} with {:?} => {}",
                     &subscriptions[self.left],
                     get_hash(&subscriptions[self.left]),
                     &subscriptions[self.right],
@@ -626,13 +626,13 @@ mod tests {
                 assert_eq!(
                     *left_arc == *right_arc,
                     self.should_match,
-                    "{name}: subscriptions should {equal}, comparing {left_arc:?} with {right_arc:?}",
+                    "{name}: subscriptions should {equal}, compkaring {left_arc:?} with {right_arc:?}",
                 );
                 // Compare Arc dyn Single hash
                 assert_eq!(
                     get_hash(&left_arc) == get_hash(&right_arc),
                     self.should_match,
-                    "{name}: subscription hashes should {equal}, comparing {:?} => {} with {:?} => {}",
+                    "{name}: subscription hashes should {equal}, compkaring {:?} => {} with {:?} => {}",
                     left_arc,
                     get_hash(&left_arc),
                     right_arc,

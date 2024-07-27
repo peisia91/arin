@@ -144,7 +144,7 @@ mod tests {
     use kaspa_core::assert_match;
     use kaspa_hashes::Hash;
 
-    #[ignore] // TODO: Arin
+    #[ignore] // TODO: Karin
     #[test]
     fn validate_body_in_isolation_test() {
         let consensus = TestConsensus::new(&Config::new(MAINNET_PARAMS));

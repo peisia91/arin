@@ -2,4 +2,4 @@
 
 High-performance p2p node library and daemon for high-BPS BlockDAG [Kaspa](https://kaspa.org) network developed in Rust.
 
-For more information please refer to the GitHub repository `README.md` located at https://github.com/peisia91/arin
+For more information please refer to the GitHub repository `README.md` located at https://github.com/peisia91/karin

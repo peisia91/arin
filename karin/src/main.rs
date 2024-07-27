@@ -46,5 +46,5 @@ pub fn main() {
     Arc::new(Signals::new(&core)).init();
 
     core.run();
-    info!("Arin has stopped...");
+    info!("Karin has stopped...");
 }

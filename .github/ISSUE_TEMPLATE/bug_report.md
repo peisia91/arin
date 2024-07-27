@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help improve Arin
+about: Create a report to help improve Karin
 title: ''
 labels: ''
 assignees: ''

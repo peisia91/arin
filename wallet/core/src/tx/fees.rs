@@ -1,5 +1,5 @@
 //!
-//! Primitives for declaring transaction fees.
+//! Primitives for declkaring transaction fees.
 //!
 
 use crate::result::Result;

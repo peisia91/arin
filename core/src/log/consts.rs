@@ -1,7 +1,7 @@
 pub const DEFAULT_LOGGER_ENV: &str = "RUST_LOG";
 
-pub const LOG_FILE_NAME: &str = "arin.log";
-pub const ERR_LOG_FILE_NAME: &str = "arin_err.log";
+pub const LOG_FILE_NAME: &str = "karin.log";
+pub const ERR_LOG_FILE_NAME: &str = "karin_err.log";
 
 pub const LOG_ARCHIVE_SUFFIX: &str = ".{}.gz";
 

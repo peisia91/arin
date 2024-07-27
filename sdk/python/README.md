@@ -1,7 +1,7 @@
 
 
-#### Arin SDK Python Bindings 
-[SDK Documentation](https://docs.arin.network/7.-sdk/python/getting-started)
+#### Karin SDK Python Bindings 
+[SDK Documentation](https://docs.karin.network/7.-sdk/python/getting-started)
 
 Built using [PyO3](https://github.com/PyO3/pyo3)
 
@@ -9,29 +9,29 @@ Built using [PyO3](https://github.com/PyO3/pyo3)
 #### Installation
 
 ```bash
-pip install arin-network
+pip install karin-network
 ```
 
 #### Running node with wRPC
 ```bash
-arin --utxoindex --rpclisten-borsh
+karin --utxoindex --rpclisten-borsh
 ```
 
 #### Usage
 
 ```python
-import arin
+import karin
 
-rpc = arin.RPC()
+rpc = karin.RPC()
 await rpc.connect()
-balance = await rpc.get_balance_by_address("arin:qzn54t6vpasykvudztupcpwn2gelxf8y9p84szksr73me39mzf69uaalnymtx")
+balance = await rpc.get_balance_by_address("karin:qzn54t6vpasykvudztupcpwn2gelxf8y9p84szksr73me39mzf69uaalnymtx")
 print("balance:", balance)
 ```
 
 ```python
-import arin
+import karin
 
-wallet = arin.Wallet()
+wallet = karin.Wallet()
 r = await wallet.connect()
 account = await wallet.create_account()
 ```

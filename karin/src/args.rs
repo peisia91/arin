@@ -196,7 +196,7 @@ pub fn cli() -> Command {
 
     #[allow(clippy::let_and_return)]
     let cmd = Command::new("kaspad")
-        .about(format!("{} (arin) v{}", env!("CARGO_PKG_DESCRIPTION"), version()))
+        .about(format!("{} (karin) v{}", env!("CARGO_PKG_DESCRIPTION"), version()))
         .version(env!("CARGO_PKG_VERSION"))
         .arg(arg!(-C --configfile <CONFIG_FILE> "Path of config file."))
         .arg(arg!(-b --appdir <DATA_DIR> "Directory to store data."))

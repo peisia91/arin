@@ -856,7 +856,7 @@ mod tests {
         let result = BlockTemplateBuilder::modify_block_template(consensus, &miner_data_1, &expected_template);
         assert!(result.is_ok(), "modify block template failed for miner data 1");
         let mut modified_template = result.unwrap();
-        // Make sure timestamps are equal before comparing the hash
+        // Make sure timestamps are equal before compkaring the hash
         if modified_template.block.header.timestamp != expected_template.block.header.timestamp {
             modified_template.block.header.timestamp = expected_template.block.header.timestamp;
             modified_template.block.header.finalize();
@@ -875,7 +875,7 @@ mod tests {
         let result = BlockTemplateBuilder::modify_block_template(consensus, &miner_data_2, &modified_template);
         assert!(result.is_ok(), "modify block template failed for miner data 2");
         let mut modified_template_2 = result.unwrap();
-        // Make sure timestamps are equal before comparing the hash
+        // Make sure timestamps are equal before compkaring the hash
         if modified_template_2.block.header.timestamp != expected_template.block.header.timestamp {
             modified_template_2.block.header.timestamp = expected_template.block.header.timestamp;
             modified_template_2.block.header.finalize();

@@ -7,7 +7,7 @@ In the future testnet 11 will act as a staging zone for all sorts of crazy exper
 ## Overview
 
 On the software side, participating requires three components:
-1. *arin* - the Arin client
+1. *karin* - the Karin client
 2.  *kaspa-miner* - the Kaspa CPU miner
 3.  *Rothschild* - a transaction generator
 
@@ -32,7 +32,7 @@ Testnet11 uses a dedicated P2P port (16311) so that nodes from the usual testnet
 We reiterate that only the included miner should be used to maintain a level playing field.
 
 First, we set-up a node:
-1. Download and extract the [arin binaries](https://github.com/peisia91/arin/releases). Alternatively, you can compile it from source yourself by following the instructions [here](https://github.com/peisia91/arin/blob/master/README.md). The rest of the instructions are written assuming the former option. If you choose to locally compile the code, replace any command of the form ``<program> <arguments>`` with ``cargo run --bin <program> --release -- <arguments>`` (see example in the next item). All actions described below should be performed on a command line window where you navigated to the directory into which the binaries were extracted.
+1. Download and extract the [karin binaries](https://github.com/peisia91/karin/releases). Alternatively, you can compile it from source yourself by following the instructions [here](https://github.com/peisia91/karin/blob/master/README.md). The rest of the instructions are written assuming the former option. If you choose to locally compile the code, replace any command of the form ``<program> <arguments>`` with ``cargo run --bin <program> --release -- <arguments>`` (see example in the next item). All actions described below should be performed on a command line window where you navigated to the directory into which the binaries were extracted.
 2. Start the ``kaspad`` client with ``utxoindex`` enabled:
 
 ```

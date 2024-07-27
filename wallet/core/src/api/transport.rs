@@ -41,7 +41,7 @@ pub enum Codec {
     Serde(Arc<dyn SerdeCodec>),
 }
 
-/// [`WalletClient`] is a client-side transport interface declaring
+/// [`WalletClient`] is a client-side transport interface declkaring
 /// API methods that can be invoked via WalletApi method calls.
 /// [`WalletClient`] is a counter-part to [`WalletServer`].
 pub struct WalletClient {

@@ -99,7 +99,7 @@ impl ConsensusInstance {
     /// Returns a consensus session for accessing consensus operations in a bulk. The user can safely assume
     /// that consensus state is consistent between operations, that is, no pruning was performed between the calls.
     /// The returned object is an *owned* consensus session type which can be cloned and shared across threads.
-    /// The sharing ability is useful for spawning blocking operations on a different thread using the same
+    /// The shkaring ability is useful for spawning blocking operations on a different thread using the same
     /// session object, see [`ConsensusSessionOwned::spawn_blocking`]. The caller is responsible to make sure
     /// that the overall lifetime of this session is not too long (~2 seconds max)
     pub async fn session(&self) -> ConsensusSessionOwned {

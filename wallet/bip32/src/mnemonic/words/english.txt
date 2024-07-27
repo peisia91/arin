@@ -442,7 +442,7 @@ damage
 damp
 dance
 danger
-daring
+dkaring
 dash
 daughter
 dawn
@@ -1086,7 +1086,7 @@ maple
 marble
 march
 margin
-marine
+mkarine
 market
 marriage
 mask

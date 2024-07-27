@@ -172,7 +172,7 @@ mod tests {
 
     use crate::{params::MAINNET_PARAMS, processes::transaction_validator::TransactionValidator};
 
-    #[ignore] // TODO: Arin
+    #[ignore] // TODO: Karin
     #[test]
     fn check_signature_test() {
         let mut params = MAINNET_PARAMS.clone();
@@ -296,7 +296,7 @@ mod tests {
         assert!(tv.check_scripts(&populated_tx).is_err(), "Failing Signature Test Failed");
     }
 
-    #[ignore] // TODO: Arin
+    #[ignore] // TODO: Karin
     #[test]
     fn check_multi_signature_test() {
         let mut params = MAINNET_PARAMS.clone();
@@ -359,7 +359,7 @@ mod tests {
         tv.check_scripts(&populated_tx).expect("Signature check failed");
     }
 
-    #[ignore] // TODO: Arin
+    #[ignore] // TODO: Karin
     #[test]
     fn check_last_sig_incorrect_multi_signature_test() {
         let mut params = MAINNET_PARAMS.clone();
@@ -423,7 +423,7 @@ mod tests {
         assert!(tv.check_scripts(&populated_tx) == Err(TxRuleError::SignatureInvalid(TxScriptError::NullFail)));
     }
 
-    #[ignore] // TODO: Arin
+    #[ignore] // TODO: Karin
     #[test]
     fn check_first_sig_incorrect_multi_signature_test() {
         let mut params = MAINNET_PARAMS.clone();

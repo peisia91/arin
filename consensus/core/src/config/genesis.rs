@@ -86,7 +86,7 @@ pub const GENESIS: GenesisBlock = GenesisBlock {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
         0x00, 0xe1, 0xf5, 0x05, 0x00, 0x00, 0x00, 0x00, // Subsidy
         0x00, 0x00, //script version
-        0x01,                                           // Varint
+        0x01,                                           // Vkarint
         0x00,                                           // OP-FALSE
         0xd7, 0x95, 0xd7, 0x9e, 0xd7, 0x94, 0x20, 0xd7, // ומה די עליך ועל אחיך ייטב בשאר כספא ודהבה למעבד כרעות אלהכם תעבדון
         0x93, 0xd7, 0x99, 0x20, 0xd7, 0xa2, 0xd7, 0x9c,
@@ -134,7 +134,7 @@ pub const TESTNET_GENESIS: GenesisBlock = GenesisBlock {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
         0x00, 0xE1, 0xF5, 0x05, 0x00, 0x00, 0x00, 0x00, // Subsidy
         0x00, 0x00, // Script version
-        0x01,                                                                         // Varint
+        0x01,                                                                         // Vkarint
         0x00,                                                                         // OP-FALSE
         0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x74, 0x65, 0x73, 0x74, 0x6e, 0x65, 0x74, // kaspa-testnet
     ],
@@ -155,7 +155,7 @@ pub const TESTNET11_GENESIS: GenesisBlock = GenesisBlock {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
         0x00, 0xE1, 0xF5, 0x05, 0x00, 0x00, 0x00, 0x00, // Subsidy
         0x00, 0x00, // Script version
-        0x01,                                                                         // Varint
+        0x01,                                                                         // Vkarint
         0x00,                                                                         // OP-FALSE
         0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x74, 0x65, 0x73, 0x74, 0x6e, 0x65, 0x74, // kaspa-testnet
         11, 4                                                                         // TN11, Relaunch 4
@@ -183,7 +183,7 @@ pub const SIMNET_GENESIS: GenesisBlock = GenesisBlock {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
         0x00, 0xE1, 0xF5, 0x05, 0x00, 0x00, 0x00, 0x00, // Subsidy
         0x00, 0x00, // Script version
-        0x01,                                                                   // Varint
+        0x01,                                                                   // Vkarint
         0x00,                                                                   // OP-FALSE
         0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x73, 0x69, 0x6d, 0x6e, 0x65, 0x74, // kaspa-simnet
     ],
@@ -215,7 +215,7 @@ pub const DEVNET_GENESIS: GenesisBlock = GenesisBlock {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Blue score
         0x00, 0xE1, 0xF5, 0x05, 0x00, 0x00, 0x00, 0x00, // Subsidy
         0x00, 0x00, // Script version
-        0x01,                                                                   // Varint
+        0x01,                                                                   // Vkarint
         0x00,                                                                   // OP-FALSE
         0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x64, 0x65, 0x76, 0x6e, 0x65, 0x74, // kaspa-devnet
     ],
@@ -226,7 +226,7 @@ mod tests {
     use super::*;
     use crate::{config::bps::Testnet11Bps, merkle::calc_hash_merkle_root};
 
-    #[ignore] // TODO: Arin
+    #[ignore] // TODO: Karin
     #[test]
     fn test_genesis_hashes() {
         [GENESIS, TESTNET_GENESIS, TESTNET11_GENESIS, SIMNET_GENESIS, DEVNET_GENESIS].into_iter().for_each(|genesis| {

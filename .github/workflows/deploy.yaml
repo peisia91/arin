@@ -48,11 +48,11 @@ jobs:
         # We're using musl to make the binaries statically linked and portable
         run: |
           cargo install cargo-zigbuild
-          cargo --verbose zigbuild --bin arin --release --target x86_64-unknown-linux-gnu.2.27
+          cargo --verbose zigbuild --bin karin --release --target x86_64-unknown-linux-gnu.2.27
           mkdir bin || true
-          cp target/x86_64-unknown-linux-gnu/release/arin bin/
-          archive="bin/arin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
-          asset_name="arin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
+          cp target/x86_64-unknown-linux-gnu/release/karin bin/
+          archive="bin/karin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
+          asset_name="karin-${{ github.event.release.tag_name }}-linux-gnu-amd64.zip"
           zip -r "${archive}" ./bin/*
           echo "archive=${archive}" >> $GITHUB_ENV
           echo "asset_name=${asset_name}" >> $GITHUB_ENV
@@ -61,11 +61,11 @@ jobs:
         if: runner.os == 'Windows'
         shell: bash
         run: |
-          cargo build --bin arin --release
+          cargo build --bin karin --release
           mkdir bin || true
-          cp target/release/arin.exe bin/
-          archive="bin/arin-${{ github.event.release.tag_name }}-win64.zip"
-          asset_name="arin-${{ github.event.release.tag_name }}-win64.zip"
+          cp target/release/karin.exe bin/
+          archive="bin/karin-${{ github.event.release.tag_name }}-win64.zip"
+          asset_name="karin-${{ github.event.release.tag_name }}-win64.zip"
           powershell "Compress-Archive bin/* \"${archive}\""
           echo "archive=${archive}" >> $GITHUB_ENV
           echo "asset_name=${asset_name}" >> $GITHUB_ENV
@@ -73,11 +73,11 @@ jobs:
       - name: Build on MacOS
         if: runner.os == 'macOS'
         run: |
-          cargo build --bin arin --release
+          cargo build --bin karin --release
           mkdir bin || true
-          cp target/release/arin bin/
-          archive="bin/arin-${{ github.event.release.tag_name }}-osx.zip"
-          asset_name="arin-${{ github.event.release.tag_name }}-osx.zip"
+          cp target/release/karin bin/
+          archive="bin/karin-${{ github.event.release.tag_name }}-osx.zip"
+          asset_name="karin-${{ github.event.release.tag_name }}-osx.zip"
           zip -r "${archive}" ./bin/*
           echo "archive=${archive}" >> $GITHUB_ENV
           echo "asset_name=${asset_name}" >> $GITHUB_ENV

@@ -1,7 +1,7 @@
 [package]
-name = "arin"
-description = "Arin full node daemon"
-keywords = ["arin", "kaspa", "blockdag"]
+name = "karin"
+description = "Karin full node daemon"
+keywords = ["karin", "kaspa", "blockdag"]
 rust-version.workspace = true
 version.workspace = true
 edition.workspace = true

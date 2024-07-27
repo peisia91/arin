@@ -1,10 +1,10 @@
 import unittest
-import arin
+import karin
 
 class TestBip32(unittest.TestCase):
 
     def test_mnemonic(self):
-        bip32 = arin.Bip32() # TODO: Convert to static class ?
+        bip32 = karin.Bip32() # TODO: Convert to static class ?
 
         # 24 words
         words = bip32.generate_mnemonic().split()
@@ -20,7 +20,7 @@ class TestBip32(unittest.TestCase):
 
 class TestAsyncBip32(unittest.IsolatedAsyncioTestCase):
     async def test_asd(self):
-        bip32 = arin.Bip32()
+        bip32 = karin.Bip32()
 
         len = await bip32.generate_mnemonicasd()
         print("len", len)

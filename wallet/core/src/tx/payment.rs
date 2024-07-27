@@ -1,5 +1,5 @@
 //!
-//! Primitives for declaring transaction payment destinations.
+//! Primitives for declkaring transaction payment destinations.
 //!
 
 use crate::imports::*;
